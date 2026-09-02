@@ -1,0 +1,286 @@
+/* ==========================================================================
+   1. VARIABLES & RESET GENERAL
+   ========================================================================== */
+:root {
+    --bg-page: #eef2f7;
+    --bg-card: #ffffff;
+    --text-primary: #0f1e36;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --accent-color: #5b5fc7;
+    --accent-light: #c7d2fe;
+    --accent-glow: #e0e7ff;
+    --accent-hover: #4338ca;
+    --btn-border: #b8c4f7;
+    --btn-hover-bg: #f5f7ff;
+    --shadow-card: 0 20px 45px -10px rgba(15, 30, 65, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-btn-hover: 0 8px 18px rgba(91, 95, 199, 0.16);
+    --font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+    --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-page);
+    background: radial-gradient(circle at 50% 20%, #f4f7fb 0%, #e6edf5 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   2. TARJETA PRINCIPAL (CARD)
+   ========================================================================== */
+.card {
+    background-color: var(--bg-card);
+    width: 92%;
+    max-width: 580px;
+    border-radius: 28px;
+    box-shadow: var(--shadow-card);
+    padding: 36px 44px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   3. NAVEGACIÓN SUPERIOR
+   ========================================================================== */
+.card-header {
+    margin-bottom: 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 600;
+    position: relative;
+    padding: 4px 2px;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-link.active {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   4. PERFIL (AVATAR, NOMBRES Y BIOGRAFÍA)
+   ========================================================================== */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Halo y contenedor circular para la foto */
+.avatar-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    box-shadow: 0 10px 25px rgba(91, 95, 199, 0.15);
+    margin: 4px auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.avatar-wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(91, 95, 199, 0.22);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Títulos y jerarquía de texto */
+.profile-name {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+}
+
+.profile-role {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* Línea decorativa divisoria */
+.divider {
+    width: 44px;
+    height: 3px;
+    background-color: var(--accent-light);
+    border: none;
+    border-radius: 3px;
+    margin: 0 auto 20px;
+}
+
+/* Biografía */
+.profile-bio {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 430px;
+    margin: 0 auto 30px;
+}
+
+/* ==========================================================================
+   5. BOTONES DE REDES SOCIALES
+   ========================================================================== */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    padding: 13px 20px;
+    background-color: var(--bg-card);
+    border: 1.5px solid var(--btn-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-color);
+    fill: currentColor;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    background-color: var(--btn-hover-bg);
+    border-color: var(--accent-color);
+    color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-btn-hover);
+}
+
+.social-btn:hover .social-icon {
+    transform: scale(1.12);
+}
+
+.social-btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (MÓVILES)
+   ========================================================================== */
+@media (max-width: 520px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 28px 20px 36px;
+        border-radius: 22px;
+    }
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 0.88rem;
+    }
+
+    .avatar-wrapper {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 18px;
+    }
+
+    .profile-name {
+        font-size: 1.6rem;
+    }
+
+    .profile-role {
+        font-size: 0.9rem;
+    }
+
+    .profile-bio {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        margin-bottom: 24px;
+    }
+
+    .social-links {
+        max-width: 100%;
+    }
+
+    .social-btn {
+        padding: 12px 18px;
+        font-size: 0.92rem;
+    }
+}
