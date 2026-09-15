@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Maite Ramírez</title>
+    <meta name="description"
+        content="Ponte en contacto con Maite Ramírez para proyectos de Marketing Digital, gestión de redes sociales y estrategias creativas.">
+
+    <!-- Tipografía Google Fonts (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS compartidos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- TARJETA PRINCIPAL (CARD AMPLIADA PARA CONTACTO) -->
+    <!-- Solucionado con la guía de diseño: Consistencia visual y distribución en dos columnas -->
+    <main class="card card-large" id="main-card">
+
+        <!-- NAVEGACIÓN SUPERIOR (Rutas relativas consistentes) -->
+        <header class="card-header">
+            <nav aria-label="Navegación principal">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="proyectos.html" class="nav-link">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link active" aria-current="page">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ENCABEZADO DE SECCIÓN -->
+        <section class="section-header">
+            <h1 class="section-title">Contacto</h1>
+            <div class="title-accent-bar" aria-hidden="true"></div>
+        </section>
+
+        <!-- DISTRIBUCIÓN DE CONTACTO EN 2 COLUMNAS -->
+        <div class="contact-layout">
+
+            <!-- COLUMNA IZQUIERDA: MENSAJE INTRODUCTORIO Y FORMULARIO -->
+            <!-- Solucionado con la guía HTML/CSS: Atributos obligatorios for/id, required y type=email -->
+            <section class="contact-form-column" aria-label="Formulario de contacto">
+                <p class="contact-intro">
+                    ¿Tienes un proyecto en mente?<br>
+                    ¡Hablemos! Completa el formulario y me pondré en contacto contigo.
+                </p>
+
+                <form action="#" method="POST" class="contact-form" id="contact-form">
+                    <!-- Campo Nombre -->
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required>
+                    </div>
+
+                    <!-- Campo Correo -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                    </div>
+
+                    <!-- Campo Mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" class="form-textarea" rows="4"
+                            placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                    </div>
+
+                    <!-- Botón de Envío con Icono -->
+                    <button type="submit" class="btn-submit" id="btn-submit">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        <span>Enviar mensaje</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- COLUMNA DERECHA: ILUSTRACIÓN Y CORREO DIRECTO -->
+            <aside class="contact-sidebar" aria-label="Información de contacto alternativa">
+                <!-- Ilustración 3D de sobre y avión de papel -->
+                <div class="contact-illus-wrapper">
+                    <img src="img/contacto-ilustracion.jpg" alt="Ilustración 3D de sobre y avión de papel"
+                        class="contact-illus-img">
+                </div>
+
+                <!-- Tarjeta con correo institucional directo -->
+                <div class="contact-info-card">
+                    <div class="info-card-icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="info-card-body">
+                        <p class="info-card-title">También puedes escribirme a</p>
+                        <a href="mailto:mai.ramirezm@duocuc.cl" class="info-card-email">mai.ramirezm@duocuc.cl</a>
+                        <p class="info-card-sub">Responderé a la brevedad posible.</p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
