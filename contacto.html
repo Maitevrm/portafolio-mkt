@@ -27,34 +27,35 @@
     <main class="card card-large" id="main-card" data-aos="fade-up" data-aos-duration="800">
 
         <!-- NAVEGACIÓN SUPERIOR (Rutas relativas consistentes) -->
-        <header class="card-header" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">
-            <nav aria-label="Navegación principal">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="proyectos.html" class="nav-link">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contacto.html" class="nav-link active" aria-current="page">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+
+        <nav aria-label="Navegación principal" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="proyectos.html" class="nav-link">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link active" aria-current="page">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
 
         <!-- ENCABEZADO DE SECCIÓN -->
-        <section class="section-header" data-aos="fade-up" data-aos-delay="150">
+        <header class="section-header" data-aos="fade-up" data-aos-delay="150">
             <h1 class="section-title">Contacto</h1>
             <div class="title-accent-bar" aria-hidden="true"></div>
-        </section>
+        </header>
 
         <!-- DISTRIBUCIÓN DE CONTACTO EN 2 COLUMNAS -->
         <div class="contact-layout">
 
             <!-- COLUMNA IZQUIERDA: MENSAJE INTRODUCTORIO Y FORMULARIO -->
             <!-- Solucionado con la guía HTML/CSS: Atributos obligatorios for/id, required y type=email -->
-            <section class="contact-form-column" aria-label="Formulario de contacto" data-aos="fade-right" data-aos-delay="200">
+            <section class="contact-form-column" aria-label="Formulario de contacto" data-aos="fade-right"
+                data-aos-delay="200">
                 <p class="contact-intro">
                     ¿Tienes un proyecto en mente?<br>
                     ¡Hablemos! Completa el formulario y me pondré en contacto contigo.
@@ -64,13 +65,15 @@
                     <!-- Campo Nombre -->
                     <div class="form-group">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required>
+                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre"
+                            required>
                     </div>
 
                     <!-- Campo Correo -->
                     <div class="form-group">
                         <label for="email" class="form-label">Correo electrónico</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com"
+                            required>
                     </div>
 
                     <!-- Campo Mensaje -->
@@ -93,7 +96,8 @@
             </section>
 
             <!-- COLUMNA DERECHA: ILUSTRACIÓN Y CORREO DIRECTO -->
-            <aside class="contact-sidebar" aria-label="Información de contacto alternativa" data-aos="fade-left" data-aos-delay="250">
+            <aside class="contact-sidebar" aria-label="Información de contacto alternativa" data-aos="fade-left"
+                data-aos-delay="250">
                 <!-- Ilustración 3D de sobre y avión de papel -->
                 <div class="contact-illus-wrapper">
                     <img src="img/contacto-ilustracion.jpg" alt="Ilustración 3D de sobre y avión de papel"
@@ -105,7 +109,8 @@
                     <div class="info-card-icon-badge" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                     </div>
