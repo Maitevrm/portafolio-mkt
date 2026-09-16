@@ -15,15 +15,18 @@
 
     <!-- Estilos CSS compartidos -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Librería AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
 
     <!-- TARJETA PRINCIPAL (CARD) -->
-    <main class="card" id="main-card">
+    <main class="card" id="main-card" data-aos="fade-up" data-aos-duration="800">
 
         <!-- NAVEGACIÓN SUPERIOR (Rutas relativas consistentes) -->
-        <header class="card-header">
+        <header class="card-header" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">
             <nav aria-label="Navegación principal">
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -43,20 +46,22 @@
         <!-- Solucionado con la guía de HTML/CSS: Estructura semántica de tarjeta de perfil -->
         <section class="profile-section">
             <!-- Imagen circular con halo de luz -->
-            <div class="avatar-wrapper">
-                <img src="img/foto.avif" alt="Fotografía de perfil de Maite Ramírez" class="avatar-img">
+            <div class="avatar-wrapper" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+                <img src="img/Foto maite.jpeg" alt="Fotografía de perfil de Maite Ramírez" class="avatar-img">
             </div>
 
             <!-- Información personal -->
-            <h1 class="profile-name">Maite Ramírez</h1>
-            <p class="profile-role">Estudiante de Marketing Digital</p>
+            <h1 class="profile-name" data-aos="fade-up" data-aos-delay="250">Maite Ramírez</h1>
+            <p class="profile-role" data-aos="fade-up" data-aos-delay="300">Estudiante de Marketing Digital</p>
 
             <!-- Línea decorativa -->
-            <hr class="divider">
+            <hr class="divider" data-aos="zoom-in" data-aos-delay="350">
 
             <!-- Biografía -->
-            <p class="profile-bio">
-                Soy estudiante de Marketing Digital y me apasiona la creatividad, las redes sociales y todo lo relacionado con el mundo del marketing. Me gusta aprender, crear nuevas ideas y buscar formas diferentes de conectar con las personas.
+            <p class="profile-bio" data-aos="fade-up" data-aos-delay="400">
+                Soy estudiante de Marketing Digital y me apasiona la creatividad, las redes sociales y todo lo
+                relacionado con el mundo del marketing. Me gusta aprender, crear nuevas ideas y buscar formas diferentes
+                de conectar con las personas.
             </p>
         </section>
 
@@ -66,7 +71,8 @@
             <div class="social-links">
                 <!-- Instagram -->
                 <a href="https://instagram.com/maiite.vrm" target="_blank" rel="noopener noreferrer" class="social-btn"
-                    id="btn-instagram" aria-label="Perfil de Instagram de Maite Ramírez">
+                    id="btn-instagram" aria-label="Perfil de Instagram de Maite Ramírez" data-aos="fade-up"
+                    data-aos-delay="450">
                     <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -78,7 +84,7 @@
 
                 <!-- LinkedIn -->
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn"
-                    id="btn-linkedin" aria-label="Perfil de LinkedIn">
+                    id="btn-linkedin" aria-label="Perfil de LinkedIn" data-aos="fade-up" data-aos-delay="550">
                     <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0-.02-3.28 1.64 1.64 0 0 0 .02 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z">
@@ -88,8 +94,9 @@
                 </a>
 
                 <!-- WhatsApp -->
-                <a href="https://wa.me/?text=Hola%20Maite,%20vi%20tu%20portafolio" target="_blank" rel="noopener noreferrer" class="social-btn"
-                    id="btn-whatsapp" aria-label="Enviar mensaje por WhatsApp">
+                <a href="https://wa.me/?text=Hola%20Maite,%20vi%20tu%20portafolio" target="_blank"
+                    rel="noopener noreferrer" class="social-btn" id="btn-whatsapp"
+                    aria-label="Enviar mensaje por WhatsApp" data-aos="fade-up" data-aos-delay="650">
                     <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.42 1.02 2.59.13.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.32">
@@ -102,6 +109,16 @@
 
     </main>
 
+    <!-- Librería AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 40
+        });
+    </script>
 </body>
 
 </html>

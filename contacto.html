@@ -15,16 +15,19 @@
 
     <!-- Estilos CSS compartidos -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Librería AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
 
     <!-- TARJETA PRINCIPAL (CARD AMPLIADA PARA CONTACTO) -->
     <!-- Solucionado con la guía de diseño: Consistencia visual y distribución en dos columnas -->
-    <main class="card card-large" id="main-card">
+    <main class="card card-large" id="main-card" data-aos="fade-up" data-aos-duration="800">
 
         <!-- NAVEGACIÓN SUPERIOR (Rutas relativas consistentes) -->
-        <header class="card-header">
+        <header class="card-header" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">
             <nav aria-label="Navegación principal">
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -41,7 +44,7 @@
         </header>
 
         <!-- ENCABEZADO DE SECCIÓN -->
-        <section class="section-header">
+        <section class="section-header" data-aos="fade-up" data-aos-delay="150">
             <h1 class="section-title">Contacto</h1>
             <div class="title-accent-bar" aria-hidden="true"></div>
         </section>
@@ -51,7 +54,7 @@
 
             <!-- COLUMNA IZQUIERDA: MENSAJE INTRODUCTORIO Y FORMULARIO -->
             <!-- Solucionado con la guía HTML/CSS: Atributos obligatorios for/id, required y type=email -->
-            <section class="contact-form-column" aria-label="Formulario de contacto">
+            <section class="contact-form-column" aria-label="Formulario de contacto" data-aos="fade-right" data-aos-delay="200">
                 <p class="contact-intro">
                     ¿Tienes un proyecto en mente?<br>
                     ¡Hablemos! Completa el formulario y me pondré en contacto contigo.
@@ -90,7 +93,7 @@
             </section>
 
             <!-- COLUMNA DERECHA: ILUSTRACIÓN Y CORREO DIRECTO -->
-            <aside class="contact-sidebar" aria-label="Información de contacto alternativa">
+            <aside class="contact-sidebar" aria-label="Información de contacto alternativa" data-aos="fade-left" data-aos-delay="250">
                 <!-- Ilustración 3D de sobre y avión de papel -->
                 <div class="contact-illus-wrapper">
                     <img src="img/contacto-ilustracion.jpg" alt="Ilustración 3D de sobre y avión de papel"
@@ -98,7 +101,7 @@
                 </div>
 
                 <!-- Tarjeta con correo institucional directo -->
-                <div class="contact-info-card">
+                <div class="contact-info-card" data-aos="zoom-in" data-aos-delay="350">
                     <div class="info-card-icon-badge" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -118,6 +121,16 @@
 
     </main>
 
+    <!-- Librería AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 40
+        });
+    </script>
 </body>
 
 </html>

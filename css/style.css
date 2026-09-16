@@ -9,17 +9,17 @@
     --text-primary: #0f1e36;
     --text-secondary: #4b5563;
     --text-muted: #6b7280;
-    --accent-color: #5b5fc7;
-    --accent-light: #c7d2fe;
-    --accent-glow: #e0e7ff;
-    --accent-hover: #4338ca;
-    --btn-border: #b8c4f7;
-    --btn-hover-bg: #f5f7ff;
+    --accent-color: #db2777;
+    --accent-light: #fbcfe8;
+    --accent-glow: #fdf2f8;
+    --accent-hover: #be185d;
+    --btn-border: #f9a8d4;
+    --btn-hover-bg: #fdf2f8;
     --input-border: #e2e8f0;
     --border-light: #f0f3f8;
-    --shadow-card: 0 20px 45px -10px rgba(15, 30, 65, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
-    --shadow-btn-hover: 0 8px 18px rgba(91, 95, 199, 0.16);
-    --shadow-btn-submit: 0 6px 18px rgba(91, 95, 199, 0.28);
+    --shadow-card: 0 20px 45px -10px rgba(160, 30, 85, 0.15), 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-btn-hover: 0 8px 18px rgba(219, 39, 119, 0.16);
+    --shadow-btn-submit: 0 6px 18px rgba(219, 39, 119, 0.28);
     --font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
     --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -30,10 +30,17 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-family);
-    background-color: var(--bg-page);
-    background: radial-gradient(circle at 50% 20%, #f4f7fb 0%, #e6edf5 100%);
+    background: linear-gradient(135deg, #fff0f5 0%, #fed7e2 25%, #f497b6 60%, #e05697 85%, #c026d3 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--text-primary);
     min-height: 100vh;
     display: flex;
@@ -48,11 +55,14 @@ body {
    2. TARJETA PRINCIPAL (CARD BASE Y VARIANTES)
    ========================================================================== */
 .card {
-    background-color: var(--bg-card);
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
     width: 92%;
     max-width: 580px;
     border-radius: 28px;
-    box-shadow: var(--shadow-card);
+    box-shadow: 0 20px 45px -10px rgba(160, 30, 85, 0.15), 0 1px 3px rgba(0, 0, 0, 0.04);
     padding: 36px 44px 48px;
     position: relative;
     overflow: hidden;
@@ -162,8 +172,8 @@ body {
     height: 140px;
     border-radius: 50%;
     padding: 6px;
-    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
-    box-shadow: 0 10px 25px rgba(91, 95, 199, 0.15);
+    background: linear-gradient(135deg, #ffe4ec 0%, #fbcfe8 100%);
+    box-shadow: 0 10px 25px rgba(219, 39, 119, 0.15);
     margin: 4px auto 22px;
     display: flex;
     align-items: center;
@@ -173,7 +183,7 @@ body {
 
 .avatar-wrapper:hover {
     transform: scale(1.03);
-    box-shadow: 0 12px 30px rgba(91, 95, 199, 0.22);
+    box-shadow: 0 12px 30px rgba(219, 39, 119, 0.22);
 }
 
 .avatar-img {
@@ -426,7 +436,7 @@ body {
 .form-textarea:focus {
     border-color: var(--accent-color);
     background-color: #ffffff;
-    box-shadow: 0 0 0 3.5px rgba(91, 95, 199, 0.14);
+    box-shadow: 0 0 0 3.5px rgba(219, 39, 119, 0.14);
 }
 
 .form-textarea {
@@ -464,7 +474,7 @@ body {
 .btn-submit:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(91, 95, 199, 0.35);
+    box-shadow: 0 10px 22px rgba(219, 39, 119, 0.35);
 }
 
 .btn-submit:active {
@@ -491,7 +501,7 @@ body {
     max-width: 190px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 10px 20px rgba(91, 95, 199, 0.12));
+    filter: drop-shadow(0 10px 20px rgba(219, 39, 119, 0.12));
     transition: var(--transition);
 }
 
